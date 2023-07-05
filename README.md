@@ -1,5 +1,5 @@
 # VBoxManageUI
-Simple User Interface for VirtualBox VBoxManage CLI utility
+Simple User Interface for [VirtualBox](https://www.virtualbox.org) VBoxManage utility
 
 This utility compact virtual disks in an easy way, to save a lot of disk space.
 

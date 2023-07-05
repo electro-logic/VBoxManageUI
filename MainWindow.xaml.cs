@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Configuration;
 using System.Diagnostics;
+using System.IO;
 using System.Windows;
 
 namespace VBoxManageUI
@@ -12,6 +13,11 @@ namespace VBoxManageUI
         {
             DataContext = this;
             InitializeComponent();
+            if(!File.Exists(ConfigurationManager.AppSettings["VBoxManagePath"]))
+            {
+                MessageBox.Show("Please update VBoxManagePath in the file VBoxManageUI.exe.config");
+                App.Current.Shutdown();
+            }
             ListHdd();
         }
         public void ListHdd()
